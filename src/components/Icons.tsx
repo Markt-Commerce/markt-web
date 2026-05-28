@@ -11,5 +11,7 @@ export const PlayStoreIcon = ({ className = 'w-6 h-6 object-contain shrink-0' }:
 );
 
 export const MarktLogo = ({ className = "w-6 h-6" }: { className?: string }) => (
-  <img src={marktLogo} alt="Markt" className={className} />
+  <div className={`${className} overflow-hidden`}>
+    <img src={marktLogo} alt="Markt" className="w-full h-full object-cover object-center transform scale-150" />
+  </div>
 );

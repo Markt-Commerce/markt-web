@@ -12,5 +12,13 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    server: {
+      watch: {
+        usePolling: true,
+      },
+      hmr: {
+        overlay: true,
+      },
+    },
   };
 });
