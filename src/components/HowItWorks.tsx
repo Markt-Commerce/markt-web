@@ -32,7 +32,7 @@ export const HowItWorks = ({ activeStep, setActiveStep }: HowItWorksProps) => {
 
   return (
     <section id="how-it-works" className="py-xl px-4 sm:px-6 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-xl">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 tracking-tighter text-secondary dark:text-white font-display">How Markt Works</h2>
           <p className="text-tertiary dark:text-zinc-400 max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl font-medium font-sans">A seamless transition from discovering inspiration to buying with total confidence.</p>

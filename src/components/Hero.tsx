@@ -12,7 +12,7 @@ interface HeroProps {
 
 export const Hero = ({ wordIndex, rotatingWords }: HeroProps) => {
   return (
-    <section className="pt-8 pb-16 sm:pb-20 md:pb-32 px-4 sm:px-6 flex flex-col items-center text-center relative max-w-6xl mx-auto overflow-hidden">
+    <section className="pt-8 pb-16 sm:pb-20 md:pb-32 px-4 sm:px-6 flex flex-col items-center text-center relative max-w-7xl mx-auto overflow-hidden">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

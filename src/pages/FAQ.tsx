@@ -11,7 +11,7 @@ export const FAQ = () => {
   return (
     <Layout showNav={false}>
       <SEO title="FAQs" description="Have questions? We have answers. Everything you need to know about Markt." />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16 relative z-10">
         <div className="flex items-center justify-between gap-4 mb-12">
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 rounded-DEFAULT bg-white dark:bg-zinc-900 overflow-hidden border border-outline dark:border-zinc-700 shadow-sm">

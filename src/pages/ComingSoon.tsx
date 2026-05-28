@@ -18,9 +18,9 @@ export const ComingSoon = ({ title }: ComingSoonProps) => {
         <img src={authenticConnectionsImage} alt="Coming soon background" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-zinc-950/70" />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/40 to-zinc-950/80" />
-        
+
         <div className="relative z-10 min-h-screen px-4 sm:px-6 py-8 sm:py-10 flex flex-col">
-          <div className="max-w-6xl mx-auto w-full flex items-center justify-between gap-4">
+          <div className="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="w-11 h-11 rounded-xl bg-white overflow-hidden ring-1 ring-white/40 shadow-sm">
                 <MarktLogo className="w-full h-full" />

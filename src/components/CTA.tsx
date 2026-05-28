@@ -15,14 +15,19 @@ export const CTA = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={fadeUp}
-        className="max-w-6xl mx-auto rounded-lg p-8 sm:p-10 md:p-24 text-center shadow-kinetic relative overflow-hidden bg-secondary border border-outline dark:border-zinc-800"
+        className="max-w-7xl mx-auto rounded-lg p-8 sm:p-10 md:p-24 text-center shadow-kinetic relative overflow-hidden bg-secondary border border-outline dark:border-zinc-800"
       >
-        <img src={buySafelyImage} alt="Store background" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay transition-transform duration-1000 hover:scale-105" />
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/80 to-primary/40 mix-blend-multiply"></div>
+        <img
+          src={buySafelyImage}
+          alt="Store background"
+          className="absolute inset-0 z-0 w-full h-full object-cover object-[center_25%] md:object-center opacity-65 transition-transform duration-1000 hover:scale-105"
+        />
+        <div className="absolute inset-0 z-1 bg-linear-to-br from-secondary/70 via-secondary/55 to-secondary/45"></div>
+        <div className="absolute inset-0 z-2 bg-linear-to-t from-secondary/45 via-secondary/20 to-primary/20"></div>
 
         {/* Abstract shapes */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/30 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 z-3 w-96 h-96 bg-primary/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 z-3 w-96 h-96 bg-primary/30 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
 
         <div className="relative z-10 flex flex-col items-center">
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tighter font-display leading-tight">Buy safely.<br />Sell authentically.</h2>

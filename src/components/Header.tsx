@@ -20,8 +20,8 @@ export const Header = ({ darkMode, setDarkMode, toggleMenu, mobileMenuOpen }: He
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className="fixed top-3 sm:top-6 left-0 right-0 z-50 flex justify-center px-3 sm:px-4"
     >
-      <div className="bg-white/80 dark:bg-secondary/80 backdrop-blur-xl border border-outline dark:border-zinc-800 shadow-kinetic flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 rounded-xl w-full max-w-4xl ring-1 ring-black/5 dark:ring-white/10 transition-all">
-        <Link 
+      <div className="bg-white/80 dark:bg-secondary/80 backdrop-blur-xl border border-outline dark:border-zinc-800 shadow-kinetic flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 rounded-xl w-full max-w-7xl ring-1 ring-black/5 dark:ring-white/10 transition-all">
+        <Link
           to="/"
           className="flex items-center gap-2 sm:gap-3 pl-1 sm:pl-2 cursor-pointer group"
         >
@@ -39,11 +39,11 @@ export const Header = ({ darkMode, setDarkMode, toggleMenu, mobileMenuOpen }: He
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          <motion.button 
+          <motion.button
             onClick={() => navigate('/download-app')}
             animate={{ scale: [1, 1.05, 1] }}
             whileHover={{ scale: 1.05, y: -2 }}
-            transition={{ 
+            transition={{
               scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
               y: { duration: 0.2 }
             }}
