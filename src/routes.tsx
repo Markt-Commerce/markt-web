@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { comingSoonPages } from './constants/content';
+import { PageLoader } from './components/PageLoader';
 
 // Lazy load pages for performance optimization
 const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
@@ -13,13 +14,6 @@ const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.N
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy').then(m => ({ default: m.PrivacyPolicy })));
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse').then(m => ({ default: m.TermsOfUse })));
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy').then(m => ({ default: m.CookiePolicy })));
-
-// Loading component for Suspense
-const PageLoader = () => (
-  <div className="min-h-screen flex items-center justify-center bg-background dark:bg-zinc-950">
-    <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-  </div>
-);
 
 export const AppRoutes = () => {
   return (
