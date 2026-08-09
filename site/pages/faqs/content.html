@@ -1,0 +1,259 @@
+<div class="bg-background dark:bg-zinc-950 min-h-screen pt-20 sm:pt-24 md:pt-32">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+      <!-- Sidebar / Category selection -->
+      <aside class="lg:col-span-4 flex flex-col gap-8">
+        <div class="flex flex-col gap-4">
+          <p class="text-xs font-black uppercase tracking-[0.3em] text-primary font-display">Support Center</p>
+          <h1 class="text-4xl sm:text-5xl font-black tracking-tighter text-secondary dark:text-zinc-50 font-display leading-none">Common Questions</h1>
+          <p class="text-tertiary dark:text-zinc-400 text-lg font-medium font-sans">Everything you need to know about getting started, buying, and selling on Markt.</p>
+        </div>
+
+        <nav class="flex flex-col gap-2">
+          <button type="button" data-faq-category-tab="general" class="flex items-center justify-between p-4 rounded-md font-bold font-display transition-all bg-secondary dark:bg-zinc-50 text-white dark:text-secondary shadow-kinetic">
+            General
+            <span data-active-dot class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          </button>
+          <button type="button" data-faq-category-tab="buying" class="flex items-center justify-between p-4 rounded-md font-bold font-display transition-all bg-white dark:bg-zinc-900 border border-outline dark:border-zinc-800 text-tertiary dark:text-zinc-400 hover:border-secondary dark:hover:border-primary hover:text-secondary dark:hover:text-zinc-50">
+            For Buyers
+            <span data-active-dot class="hidden w-1.5 h-1.5 rounded-full bg-primary"></span>
+          </button>
+          <button type="button" data-faq-category-tab="selling" class="flex items-center justify-between p-4 rounded-md font-bold font-display transition-all bg-white dark:bg-zinc-900 border border-outline dark:border-zinc-800 text-tertiary dark:text-zinc-400 hover:border-secondary dark:hover:border-primary hover:text-secondary dark:hover:text-zinc-50">
+            For Sellers
+            <span data-active-dot class="hidden w-1.5 h-1.5 rounded-full bg-primary"></span>
+          </button>
+          <button type="button" data-faq-category-tab="security" class="flex items-center justify-between p-4 rounded-md font-bold font-display transition-all bg-white dark:bg-zinc-900 border border-outline dark:border-zinc-800 text-tertiary dark:text-zinc-400 hover:border-secondary dark:hover:border-primary hover:text-secondary dark:hover:text-zinc-50">
+            Security & Trust
+            <span data-active-dot class="hidden w-1.5 h-1.5 rounded-full bg-primary"></span>
+          </button>
+        </nav>
+
+        <div class="p-8 rounded-lg bg-neutral dark:bg-zinc-900 border border-outline dark:border-zinc-800 space-y-4">
+          <h4 class="font-bold text-secondary dark:text-zinc-50 font-display">Still need help?</h4>
+          <p class="text-sm text-tertiary dark:text-zinc-400 font-medium font-sans">Our support team is available 24/7 to assist you with any inquiries.</p>
+          <a href="mailto:marktcommerce2020@gmail.com" class="block text-center w-full py-3 rounded-DEFAULT bg-white dark:bg-zinc-800 border border-outline dark:border-zinc-700 font-bold text-xs uppercase tracking-widest text-secondary dark:text-zinc-50 hover:bg-secondary dark:hover:bg-zinc-100 hover:text-white dark:hover:text-secondary hover:border-secondary transition-all font-display">
+            Contact Support
+          </a>
+        </div>
+      </aside>
+
+      <!-- FAQ items -->
+      <div class="lg:col-span-8">
+
+        <div data-faq-category-panel="general" class="flex flex-col gap-4">
+          <div class="pb-8 border-b border-outline dark:border-zinc-800 mb-8">
+            <h2 class="text-2xl font-black tracking-tight text-secondary dark:text-zinc-50 font-display">General</h2>
+          </div>
+          <div class="flex flex-col gap-4">
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">What makes Markt different from other marketplaces?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">Unlike traditional platforms that focus solely on the transaction, Markt is built on social interaction. We prioritize the relationship between buyers and sellers, using live video, social feeds, and direct messaging to make online shopping feel more human and trustworthy.</p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">Is Markt free to use?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">Yes, downloading the app and browsing is completely free for everyone. We only charge a small transaction fee when a sale is successfully completed.</p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">Where is Markt available?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">Currently, we are focusing on our primary launch markets. You can check app store availability in your region or sign up for our waitlist to be notified when we expand to your area.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div data-faq-category-panel="buying" class="hidden flex-col gap-4">
+          <div class="pb-8 border-b border-outline dark:border-zinc-800 mb-8">
+            <h2 class="text-2xl font-black tracking-tight text-secondary dark:text-zinc-50 font-display">For Buyers</h2>
+          </div>
+          <div class="flex flex-col gap-4">
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">How do I know I can trust a seller?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">Trust is central to Markt. You can view a seller's full history, see their interactions in live sessions, and see who else follows them. Additionally, our buyer protection ensures your funds are held securely until the item is delivered as described.</p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">What payment methods do you accept?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">We support all major credit cards, Apple Pay, and Google Pay through our secure, native checkout system.</p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">Can I return an item?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">Yes. Every seller on Markt follows our standardized return policy, though some individual storefronts may offer even more flexible terms. You can initiate a return directly through the 'Orders' section of the app.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div data-faq-category-panel="selling" class="hidden flex-col gap-4">
+          <div class="pb-8 border-b border-outline dark:border-zinc-800 mb-8">
+            <h2 class="text-2xl font-black tracking-tight text-secondary dark:text-zinc-50 font-display">For Sellers</h2>
+          </div>
+          <div class="flex flex-col gap-4">
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">How do I start selling on Markt?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">Simply download the app, create a profile, and apply for a seller account. Once verified, you can start listing products and hosting live sessions immediately.</p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">What is live selling and how does it work?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">Live selling allows you to broadcast video to your followers in real-time. You can showcase products, answer questions live, and viewers can purchase items instantly through an on-screen checkout button without leaving the stream.</p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">What are the selling fees?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">We keep our fee structure simple: a flat percentage per successful transaction. There are no monthly subscription fees or listing costs to get started.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div data-faq-category-panel="security" class="hidden flex-col gap-4">
+          <div class="pb-8 border-b border-outline dark:border-zinc-800 mb-8">
+            <h2 class="text-2xl font-black tracking-tight text-secondary dark:text-zinc-50 font-display">Security & Trust</h2>
+          </div>
+          <div class="flex flex-col gap-4">
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">How is my data protected?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">We use industry-standard encryption for all data and never share your personal information with third parties without your explicit consent.</p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">What happens if my order doesn't arrive?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">Our 'Markt Guarantee' covers all purchases. If an item isn't shipped or doesn't arrive, we provide a full refund through our integrated dispute resolution system.</p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item group">
+              <div class="w-full text-left p-6 sm:p-8 rounded-lg border transition-all duration-300 bg-white dark:bg-zinc-900 border-outline dark:border-zinc-800 hover:border-tertiary/30 shadow-sm">
+                <button type="button" data-faq-toggle aria-expanded="false" class="w-full text-left">
+                  <div class="flex items-center justify-between gap-4">
+                    <h3 class="faq-title text-lg sm:text-xl font-bold tracking-tight font-display transition-colors text-secondary dark:text-zinc-50">How do you verify sellers?</h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center bg-neutral dark:bg-zinc-800 border-outline dark:border-zinc-700 text-tertiary dark:text-zinc-400">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+                </button>
+                <div class="faq-answer">
+                  <p class="text-base sm:text-lg text-tertiary dark:text-zinc-400 leading-relaxed font-sans font-medium">All sellers undergo a verification process that includes identity checks and, for certain categories, business documentation to ensure a safe environment for all users.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,154 @@
+/* Header entrance */
+@keyframes slide-down {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.header-animate {
+  animation: slide-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Get App / Download button pulse */
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+.pulse-scale {
+  animation: pulse-scale 3s ease-in-out infinite;
+}
+.pulse-scale:hover {
+  animation-play-state: paused;
+  transform: scale(1.05) translateY(-2px);
+}
+
+/* Glow ring behind Get App button */
+@keyframes ring-pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+.btn-ring {
+  animation: ring-pulse 2s ease-out infinite;
+}
+
+/* Generic scroll reveal, driven by IntersectionObserver adding .is-visible */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+[data-reveal="left"] { transform: translateX(-50px); }
+[data-reveal="right"] { transform: translateX(50px); }
+[data-reveal="left"].is-visible,
+[data-reveal="right"].is-visible { transform: none; }
+[data-reveal-delay="1"] { transition-delay: 0.1s; }
+[data-reveal-delay="2"] { transition-delay: 0.2s; }
+[data-reveal-delay="3"] { transition-delay: 0.3s; }
+[data-reveal-delay="4"] { transition-delay: 0.4s; }
+
+/* Mobile menu circle-reveal */
+.mobile-menu {
+  clip-path: circle(0% at 100% 0%);
+  opacity: 0;
+  visibility: hidden;
+  transition: clip-path 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.7s;
+}
+.mobile-menu.open {
+  clip-path: circle(150% at 100% 0%);
+  opacity: 1;
+  visibility: visible;
+}
+.mobile-menu nav > div {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mobile-menu.open nav > div {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-menu nav > div:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu nav > div:nth-child(2) { transition-delay: 0.2s; }
+.mobile-menu nav > div:nth-child(3) { transition-delay: 0.3s; }
+.mobile-menu nav > div:nth-child(4) { transition-delay: 0.4s; }
+.mobile-menu nav > div:nth-child(5) { transition-delay: 0.5s; }
+
+/* FAQ accordion */
+.faq-answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+.faq-item.open .faq-answer {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 24px;
+}
+.faq-icon {
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.faq-item.open > div {
+  border-color: var(--color-primary);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04);
+}
+.faq-title {
+  transition: color 0.3s ease;
+}
+.faq-item.open .faq-title {
+  color: var(--color-primary);
+}
+
+/* Hero rotating word */
+.rotating-word {
+  display: inline-block;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.rotating-word.word-out {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.rotating-word.word-in-start {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* How It Works step carousel */
+.hiw-step {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateX(50px) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hiw-step.active {
+  position: relative;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.hiw-step.prev {
+  transform: translateX(-50px) scale(0.95);
+}
+.hiw-indicator {
+  transition: width 0.7s ease-out, background-color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
