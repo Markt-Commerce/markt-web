@@ -2,3 +2,4 @@
 *-lock.json
 /dist
 /skillui-output
+/.firebase
