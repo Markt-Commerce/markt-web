@@ -35,7 +35,9 @@ function renderPage({ title, description, canonicalPath, content, extraScripts =
   const canonicalTag = canonicalPath
     ? `<link rel="canonical" href="${siteUrl}${canonicalPath}" />\n    <meta property="og:url" content="${siteUrl}${canonicalPath}" />`
     : '';
-  const scriptsTag = extraScripts.map((s) => `<script src="/assets/js/${s}" defer></script>`).join('\n    ');
+  const defaultScripts = ['analytics.js'];
+  const scripts = [...new Set([...defaultScripts, ...extraScripts])];
+  const scriptsTag = scripts.map((s) => `<script src="/assets/js/${s}" defer></script>`).join('\n    ');
 
   return `<!doctype html>
 <html lang="en">

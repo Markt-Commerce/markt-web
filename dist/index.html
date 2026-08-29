@@ -23,9 +23,16 @@
      kept here as the single source of truth for the static parts. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/assets/img/icon.png" />
 <meta name="theme-color" content="#E94C2A" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Markt Technologies" />
+<meta property="og:site_name" content="Markt" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/assets/img/icon.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@marktcommerce" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
 
@@ -189,17 +196,17 @@
     <div class="w-full mt-14 sm:mt-20 md:mt-24 relative">
       <div class="absolute inset-x-0 inset-y-1/4 bg-primary/20 blur-[120px] rounded-[100%] pointer-events-none"></div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 w-full relative z-10">
-        <div data-reveal class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic md:translate-y-12 border border-outline dark:border-zinc-800">
-          <img src="/assets/img/fashion-shoes.jpg" alt="Shoes" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        <div data-reveal data-discovery-item class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic md:translate-y-12 border border-outline dark:border-zinc-800">
+          <img loading="lazy" src="/assets/img/fashion-shoes.jpg" alt="Shoes" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
         </div>
-        <div data-reveal data-reveal-delay="1" class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic border border-outline dark:border-zinc-800">
-          <img src="/assets/img/graphic-tshirt-trendy-design-mockup-presented-wooden-hanger.jpg" alt="Fashion" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        <div data-reveal data-reveal-delay="1" data-discovery-item class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic border border-outline dark:border-zinc-800">
+          <img loading="lazy" src="/assets/img/graphic-tshirt-trendy-design-mockup-presented-wooden-hanger.jpg" alt="Fashion" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
         </div>
-        <div data-reveal data-reveal-delay="2" class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic md:translate-y-8 border border-outline dark:border-zinc-800">
-          <img src="/assets/img/handbag.jpg" alt="Bag" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        <div data-reveal data-reveal-delay="2" data-discovery-item class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic md:translate-y-8 border border-outline dark:border-zinc-800">
+          <img loading="lazy" src="/assets/img/handbag.jpg" alt="Bag" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
         </div>
-        <div data-reveal data-reveal-delay="3" class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic hidden sm:block md:-translate-y-4 border border-outline dark:border-zinc-800">
-          <img src="/assets/img/closeup-shot-modern-cool-black-digital-watch-with-brown-leather-strap.jpg" alt="Watch" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        <div data-reveal data-reveal-delay="3" data-discovery-item class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic hidden sm:block md:-translate-y-4 border border-outline dark:border-zinc-800">
+          <img loading="lazy" src="/assets/img/closeup-shot-modern-cool-black-digital-watch-with-brown-leather-strap.jpg" alt="Watch" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
         </div>
       </div>
     </div>
@@ -584,9 +591,9 @@
   <div class="max-w-7xl mx-auto pt-8 border-t border-outline dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-semibold text-tertiary/60 dark:text-zinc-500 font-sans">
     <p>&copy; <span data-current-year>2026</span> Markt Technologies. All rights reserved.</p>
     <div class="flex gap-6">
-      <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">Twitter</a>
-      <a href="https://www.instagram.com/marktcommerce/" class="hover:text-secondary dark:hover:text-white transition-colors">Instagram</a>
-      <a href="https://www.linkedin.com/company/marktcommerce/" class="hover:text-secondary dark:hover:text-white transition-colors">LinkedIn</a>
+      <a href="https://x.com/" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="hover:text-secondary dark:hover:text-white transition-colors">Twitter</a>
+      <a href="https://www.instagram.com/marktcommerce/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="hover:text-secondary dark:hover:text-white transition-colors">Instagram</a>
+      <a href="https://www.linkedin.com/company/marktcommerce/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="hover:text-secondary dark:hover:text-white transition-colors">LinkedIn</a>
     </div>
   </div>
 </footer>
@@ -646,6 +653,7 @@
     <script src="/assets/js/dark-mode.js" defer></script>
     <script src="/assets/js/nav.js" defer></script>
     <script src="/assets/js/reveal.js" defer></script>
+    <script src="/assets/js/analytics.js" defer></script>
     <script src="/assets/js/rotating-words.js" defer></script>
     <script src="/assets/js/how-it-works-carousel.js" defer></script>
   </body>
