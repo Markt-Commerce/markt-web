@@ -60,7 +60,11 @@
         <svg data-icon-sun class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
         <svg data-icon-moon width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
       </button>
-      <a href="/download-app/" class="pulse-scale hidden sm:flex bg-secondary dark:bg-white text-white dark:text-secondary px-6 py-3 rounded-DEFAULT font-bold text-sm transition-all shadow-kinetic relative border border-transparent font-display">
+      <a href="/discover/" data-get-app-link class="pulse-scale hidden sm:flex bg-secondary dark:bg-white text-white dark:text-secondary px-6 py-3 rounded-DEFAULT font-bold text-sm transition-all shadow-kinetic relative border border-transparent font-display">
+        <span class="btn-ring absolute inset-0 bg-primary/20 rounded-DEFAULT -z-10"></span>
+        Explore Marketplace
+      </a>
+      <a href="/download-app/" data-mobile-get-app-link class="pulse-scale sm:hidden flex bg-secondary dark:bg-white text-white dark:text-secondary px-4 py-2.5 rounded-DEFAULT font-bold text-xs transition-all shadow-kinetic relative border border-transparent font-display">
         <span class="btn-ring absolute inset-0 bg-primary/20 rounded-DEFAULT -z-10"></span>
         Get App
       </a>
@@ -71,6 +75,34 @@
     </div>
   </div>
 </header>
+<script>
+  (function () {
+    const desktopLink = document.querySelector('[data-get-app-link]');
+    const mobileLink = document.querySelector('[data-mobile-get-app-link]');
+
+    const ua = navigator.userAgent || navigator.vendor || window.opera || '';
+    const isIOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/i.test(ua);
+
+    const appStoreUrl = 'https://apps.apple.com/';
+    const googlePlayUrl = 'https://play.google.com/store/apps';
+    const webAppUrl = '/discover/';
+
+    if (desktopLink) {
+      desktopLink.href = webAppUrl;
+      desktopLink.setAttribute('aria-label', 'Explore the Markt marketplace');
+      desktopLink.setAttribute('target', '_self');
+      desktopLink.removeAttribute('rel');
+    }
+
+    if (mobileLink) {
+      mobileLink.href = '/download-app/';
+      mobileLink.setAttribute('target', '_self');
+      mobileLink.removeAttribute('rel');
+      mobileLink.setAttribute('aria-label', 'Go to the Markt download page');
+    }
+  })();
+</script>
 
     <div data-mobile-menu class="mobile-menu fixed inset-0 z-100 bg-zinc-950 text-white flex flex-col items-center justify-center overflow-y-auto px-6 py-20 sm:py-32">
   <div data-menu-cursor class="hidden lg:block absolute left-0 top-0 w-8 h-8 rounded-full bg-primary mix-blend-screen pointer-events-none z-50 blur-sm"></div>
@@ -116,7 +148,7 @@
   </nav>
 
   <div class="absolute md:hidden bottom-10 left-0 right-0 px-6 flex justify-center gap-8 text-zinc-500 text-xs font-black uppercase tracking-widest font-display">
-    <span class="hover:text-white cursor-pointer transition-colors">Instagram</span>
+    <a href="https://www.instagram.com/marktcommerce/"><span class="hover:text-white cursor-pointer transition-colors">Instagram</span></a>
     <span class="hover:text-white cursor-pointer transition-colors">Twitter / X</span>
   </div>
 </div>
@@ -138,14 +170,14 @@
     </p>
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full">
-      <a href="/download-app/" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
+      <a href="/discover/" data-store-link="app-store" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
         <img src="/assets/img/app-store.png" alt="App Store" class="w-6 h-6 object-contain shrink-0" />
         <div class="text-left flex flex-col justify-center">
           <div class="text-[10px] uppercase font-bold leading-none mb-1 text-zinc-400 dark:text-zinc-500 font-display tracking-wider">Download on the</div>
           <div class="text-lg font-bold leading-none font-display">App Store</div>
         </div>
       </a>
-      <a href="/download-app/" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
+      <a href="/discover/" data-store-link="google-play" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
         <img src="/assets/img/app.png" alt="Google Play" class="w-6 h-6 object-contain shrink-0" />
         <div class="text-left flex flex-col justify-center">
           <div class="text-[10px] uppercase font-bold leading-none mb-1 text-zinc-400 dark:text-zinc-500 font-display tracking-wider">GET IT ON</div>
@@ -531,7 +563,7 @@
       <div>
         <h4 class="text-secondary dark:text-zinc-50 font-bold mb-6 text-base tracking-tight font-display uppercase tracking-widest text-xs">Platform</h4>
         <ul class="flex flex-col gap-3 text-sm font-medium font-sans">
-          <li><a href="/download-app/" class="hover:text-primary transition-colors">Download App</a></li>
+          <li><a href="/discover/" data-download-link class="hover:text-primary transition-colors">Download App</a></li>
           <li><a href="/discover/" class="hover:text-primary transition-colors">Discover</a></li>
           <li><a href="/live-selling/" class="hover:text-primary transition-colors">Live Selling</a></li>
           <li><a href="/trust-safety/" class="hover:text-primary transition-colors">Trust & Safety</a></li>
@@ -553,12 +585,62 @@
     <p>&copy; <span data-current-year>2026</span> Markt Technologies. All rights reserved.</p>
     <div class="flex gap-6">
       <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">Twitter</a>
-      <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">Instagram</a>
-      <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">TikTok</a>
+      <a href="https://www.instagram.com/marktcommerce/" class="hover:text-secondary dark:hover:text-white transition-colors">Instagram</a>
+      <a href="https://www.linkedin.com/company/marktcommerce/" class="hover:text-secondary dark:hover:text-white transition-colors">LinkedIn</a>
     </div>
   </div>
 </footer>
-<script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
+<script>
+  (function () {
+    const storeLinks = document.querySelectorAll('[data-store-link]');
+    const paymentLinks = document.querySelectorAll('[data-download-link]');
+    const ua = navigator.userAgent || navigator.vendor || window.opera || '';
+    const isIOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/i.test(ua);
+
+    const appStoreUrl = 'https://apps.apple.com/';
+    const googlePlayUrl = 'https://play.google.com/store/apps';
+    const webAppUrl = '/discover/';
+
+    storeLinks.forEach(function (link) {
+      const kind = link.getAttribute('data-store-link');
+      const destination = kind === 'app-store' ? appStoreUrl : kind === 'google-play' ? googlePlayUrl : webAppUrl;
+      link.href = isIOS && kind === 'app-store' ? appStoreUrl : isAndroid && kind === 'google-play' ? googlePlayUrl : isIOS && kind === 'google-play' ? webAppUrl : isAndroid && kind === 'app-store' ? webAppUrl : destination;
+
+      if (isIOS || isAndroid) {
+        const preferred = isIOS ? appStoreUrl : googlePlayUrl;
+        if ((kind === 'app-store' && isIOS) || (kind === 'google-play' && isAndroid)) {
+          link.href = preferred;
+        } else if ((kind === 'app-store' && isAndroid) || (kind === 'google-play' && isIOS)) {
+          link.href = webAppUrl;
+        }
+      }
+
+      if (isIOS || isAndroid) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      } else {
+        link.setAttribute('target', '_self');
+        link.removeAttribute('rel');
+      }
+    });
+
+    paymentLinks.forEach(function (link) {
+      link.href = isIOS ? appStoreUrl : isAndroid ? googlePlayUrl : webAppUrl;
+      if (isIOS || isAndroid) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      } else {
+        link.setAttribute('target', '_self');
+        link.removeAttribute('rel');
+      }
+    });
+
+    document.querySelectorAll('[data-current-year]').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+  })();
+</script>
 
 
     <script src="/assets/js/dark-mode.js" defer></script>
