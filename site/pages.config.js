@@ -71,6 +71,11 @@ export default [
   comingSoon('download-app', 'Download App'),
   comingSoon('discover', 'Discover'),
   comingSoon('live-selling', 'Live Selling'),
-  comingSoon('trust-safety', 'Trust & Safety'),
+  {
+    slug: 'trust-safety',
+    title: 'Trust & Safety',
+    description: 'Learn how Markt protects buyers and sellers with identity checks, moderation, refunds, and safer discovery.',
+    content: 'pages/trust-safety/content.html',
+  },
   comingSoon('careers', 'Careers'),
 ];
