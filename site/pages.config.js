@@ -77,5 +77,11 @@ export default [
     description: 'Learn how Markt protects buyers and sellers with identity checks, moderation, refunds, and safer discovery.',
     content: 'pages/trust-safety/content.html',
   },
+  {
+    slug: 'delete-account',
+    title: 'Delete Account',
+    description: 'Learn how to delete your account on Markt and remove your personal information from our platform.',
+    content: 'pages/delete-account/content.html',
+  },
   comingSoon('careers', 'Careers'),
 ];

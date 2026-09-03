@@ -23,16 +23,46 @@
      kept here as the single source of truth for the static parts. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+
+<link rel="canonical" href="https://marktcommerce.com/" />
+
 <meta name="theme-color" content="#E94C2A" />
 <meta name="robots" content="index, follow" />
 <meta name="author" content="Markt Technologies" />
+
+<meta
+  name="description"
+  content="Everything you need, from people you can trust. Shop, discover and buy from local sellers on Markt — Nigeria's social marketplace built for everyday life."
+/>
+
+<meta
+  name="keywords"
+  content="Markt, Markt Nigeria, online marketplace Nigeria, buy and sell Nigeria, social marketplace Nigeria, online shopping Nigeria, student marketplace Nigeria, grocery marketplace Nigeria, Nigerian marketplace"
+/>
+
 <meta property="og:site_name" content="Markt" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="/assets/img/icon.png" />
+<meta property="og:url" content="https://marktcommerce.com/" />
+<meta property="og:title" content="Markt — Everything you need, from people you can trust." />
+<meta
+  property="og:description"
+  content="Shop, discover and buy from local sellers on Markt — Nigeria's social marketplace built for everyday life."
+/>
+<meta property="og:image" content="https://marktcommerce.com/assets/img/icon.png" />
+
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@marktcommerce" />
+<meta name="twitter:title" content="Markt — Everything you need, from people you can trust." />
+<meta
+  name="twitter:description"
+  content="Shop, discover and buy from local sellers on Markt — Nigeria's social marketplace built for everyday life."
+/>
+<meta name="twitter:image" content="https://marktcommerce.com/assets/img/icon.png" />
+```
 
     <link rel="stylesheet" href="/assets/css/main.css" />
 
@@ -67,14 +97,6 @@
         <svg data-icon-sun class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
         <svg data-icon-moon width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
       </button>
-      <a href="/discover/" data-get-app-link class="pulse-scale hidden sm:flex bg-secondary dark:bg-white text-white dark:text-secondary px-6 py-3 rounded-DEFAULT font-bold text-sm transition-all shadow-kinetic relative border border-transparent font-display">
-        <span class="btn-ring absolute inset-0 bg-primary/20 rounded-DEFAULT -z-10"></span>
-        Explore Marketplace
-      </a>
-      <a href="/download-app/" data-mobile-get-app-link class="pulse-scale sm:hidden flex bg-secondary dark:bg-white text-white dark:text-secondary px-4 py-2.5 rounded-DEFAULT font-bold text-xs transition-all shadow-kinetic relative border border-transparent font-display">
-        <span class="btn-ring absolute inset-0 bg-primary/20 rounded-DEFAULT -z-10"></span>
-        Get App
-      </a>
       <button type="button" data-menu-open aria-label="Toggle Menu" class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
         <svg data-icon-menu width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         <svg data-icon-close class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -606,6 +628,7 @@
           <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
           <li><a href="/cookie-policy/" class="hover:text-primary transition-colors">Cookie Policy</a></li>
           <li><a href="/terms-of-service/" class="hover:text-primary transition-colors">Terms of Service</a></li>
+          <li><a href="/delete-account/" class="hover:text-primary transition-colors">Delete Account</a></li>
         </ul>
       </div>
     </div>
@@ -629,7 +652,7 @@
 
     const appStoreUrl = 'https://apps.apple.com/';
     const googlePlayUrl = 'https://play.google.com/store/apps';
-    const webAppUrl = '/discover/';
+    const webAppUrl = 'https://app.marktcommerce.com/app/marketplace';
 
     storeLinks.forEach(function (link) {
       const kind = link.getAttribute('data-store-link');
