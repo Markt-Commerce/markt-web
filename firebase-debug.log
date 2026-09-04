@@ -1,0 +1,17 @@
+[debug] [2026-09-03T16:50:40.956Z] ----------------------------------------------------------------------
+[debug] [2026-09-03T16:50:40.961Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-09-03T16:50:40.962Z] CLI Version:   15.26.0
+[debug] [2026-09-03T16:50:40.962Z] Platform:      win32
+[debug] [2026-09-03T16:50:40.962Z] Node Version:  v24.15.0
+[debug] [2026-09-03T16:50:40.963Z] Detected Agent: unknown
+[debug] [2026-09-03T16:50:40.963Z] Time:          Thu Sep 03 2026 17:50:40 GMT+0100 (Irish Standard Time)
+[debug] [2026-09-03T16:50:40.963Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-09-03T16:50:44.576Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-09-03T16:50:44.577Z] > authorizing via signed-in user (marktcommerce2020@gmail.com)
+[debug] [2026-09-03T16:50:44.577Z] [iam] checking project marktcommerce-8c2b3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-09-03T16:50:44.604Z] Checked if tokens are valid: true, expires at: 1788457794290
+[debug] [2026-09-03T16:50:44.604Z] Checked if tokens are valid: true, expires at: 1788457794290
+[debug] [2026-09-03T16:50:44.607Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/marktcommerce-8c2b3:testIamPermissions [none]
+[debug] [2026-09-03T16:50:44.607Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/marktcommerce-8c2b3:testIamPermissions  x-goog-user-project=marktcommerce-8c2b3
+[debug] [2026-09-03T16:50:44.607Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/marktcommerce-8c2b3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
