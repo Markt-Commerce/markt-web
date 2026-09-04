@@ -21,31 +21,3 @@
     </div>
   </div>
 </header>
-<script>
-  (function () {
-    const desktopLink = document.querySelector('[data-get-app-link]');
-    const mobileLink = document.querySelector('[data-mobile-get-app-link]');
-
-    const ua = navigator.userAgent || navigator.vendor || window.opera || '';
-    const isIOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-    const isAndroid = /Android/i.test(ua);
-
-    const appStoreUrl = 'https://apps.apple.com/';
-    const googlePlayUrl = 'https://play.google.com/store/apps';
-    const webAppUrl = '/discover/';
-
-    if (desktopLink) {
-      desktopLink.href = webAppUrl;
-      desktopLink.setAttribute('aria-label', 'Explore the Markt marketplace');
-      desktopLink.setAttribute('target', '_self');
-      desktopLink.removeAttribute('rel');
-    }
-
-    if (mobileLink) {
-      mobileLink.href = '/download-app/';
-      mobileLink.setAttribute('target', '_self');
-      mobileLink.removeAttribute('rel');
-      mobileLink.setAttribute('aria-label', 'Go to the Markt download page');
-    }
-  })();
-</script>

@@ -15,20 +15,20 @@
 
     <!--
       Hero CTAs are responsive by intent:
-        - Large screens (md+, laptops/tablets): explore the web marketplace directly.
-        - Small screens (phones): download the mobile app instead.
-      When the web marketplace is not yet live, both desktop links point at /discover/
-      (the coming-soon route), mirroring the header's "Explore Marketplace" button.
+        - Large screens (md+, laptops/tablets): open the live web marketplace at
+          app.marktcommerce.com directly.
+        - Small screens (phones): send to the platform app store instead (device
+          detection via data-store-link in footer.html).
     -->
 
     <!-- Large-device CTAs: explore the marketplace -->
     <div class="hidden md:flex flex-row items-center justify-center gap-6 mt-4 w-full">
-      <a href="/discover/" data-cta="explore-marketplace" class="pulse-scale group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-DEFAULT font-bold text-base min-w-[220px] border border-transparent relative shadow-kinetic bg-secondary text-white dark:bg-white dark:text-secondary font-display transition-all">
+      <a href="https://app.marktcommerce.com/app/marketplace" data-cta="explore-marketplace" class="pulse-scale group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-DEFAULT font-bold text-base min-w-[220px] border border-transparent relative shadow-kinetic bg-secondary text-white dark:bg-white dark:text-secondary font-display transition-all">
         <span class="btn-ring absolute inset-0 bg-primary/20 rounded-DEFAULT -z-10"></span>
         Explore the marketplace
         <svg class="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
       </a>
-      <a href="/discover/" data-cta="i-want-to-sell" class="group inline-flex items-center gap-2 pb-1 font-bold text-base text-secondary dark:text-white font-display border-b-2 border-secondary/30 dark:border-white/30 hover:text-primary hover:border-primary transition-colors">
+      <a href="https://app.marktcommerce.com/app/marketplace" data-cta="i-want-to-sell" class="group inline-flex items-center gap-2 pb-1 font-bold text-base text-secondary dark:text-white font-display border-b-2 border-secondary/30 dark:border-white/30 hover:text-primary hover:border-primary transition-colors">
         I want to sell
         <svg class="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
       </a>
@@ -390,14 +390,14 @@
           Join the platform that is changing the way mobile commerce feels. Available now on iOS and Android.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-6 w-full sm:w-auto">
-          <a href="/download-app/" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
+          <a href="https://app.marktcommerce.com/app/marketplace" data-store-link="app-store" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
             <img src="/assets/img/app-store.png" alt="App Store" class="w-6 h-6 object-contain shrink-0" />
             <div class="text-left flex flex-col justify-center">
               <div class="text-[10px] uppercase font-bold leading-none mb-1 text-zinc-400 dark:text-zinc-500 font-display tracking-wider">Download on the</div>
               <div class="text-lg font-bold leading-none font-display">App Store</div>
             </div>
           </a>
-          <a href="/download-app/" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
+          <a href="https://app.marktcommerce.com/app/marketplace" data-store-link="google-play" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
             <img src="/assets/img/app.png" alt="Google Play" class="w-6 h-6 object-contain shrink-0" />
             <div class="text-left flex flex-col justify-center">
               <div class="text-[10px] uppercase font-bold leading-none mb-1 text-zinc-400 dark:text-zinc-500 font-display tracking-wider">GET IT ON</div>
