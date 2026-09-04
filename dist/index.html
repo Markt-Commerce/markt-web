@@ -23,9 +23,46 @@
      kept here as the single source of truth for the static parts. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="icon" type="image/png" href="/assets/img/icon.png" />
+
+<link rel="canonical" href="https://marktcommerce.com/" />
+
 <meta name="theme-color" content="#E94C2A" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Markt Technologies" />
+
+<meta
+  name="description"
+  content="Everything you need, from people you can trust. Shop, discover and buy from local sellers on Markt — Nigeria's social marketplace built for everyday life."
+/>
+
+<meta
+  name="keywords"
+  content="Markt, Markt Nigeria, online marketplace Nigeria, buy and sell Nigeria, social marketplace Nigeria, online shopping Nigeria, student marketplace Nigeria, grocery marketplace Nigeria, Nigerian marketplace"
+/>
+
+<meta property="og:site_name" content="Markt" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://marktcommerce.com/" />
+<meta property="og:title" content="Markt — Everything you need, from people you can trust." />
+<meta
+  property="og:description"
+  content="Shop, discover and buy from local sellers on Markt — Nigeria's social marketplace built for everyday life."
+/>
+<meta property="og:image" content="https://marktcommerce.com/assets/img/icon.png" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@marktcommerce" />
+<meta name="twitter:title" content="Markt — Everything you need, from people you can trust." />
+<meta
+  name="twitter:description"
+  content="Shop, discover and buy from local sellers on Markt — Nigeria's social marketplace built for everyday life."
+/>
+<meta name="twitter:image" content="https://marktcommerce.com/assets/img/icon.png" />
+```
 
     <link rel="stylesheet" href="/assets/css/main.css" />
 
@@ -60,10 +97,6 @@
         <svg data-icon-sun class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
         <svg data-icon-moon width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
       </button>
-      <a href="/download-app/" class="pulse-scale hidden sm:flex bg-secondary dark:bg-white text-white dark:text-secondary px-6 py-3 rounded-DEFAULT font-bold text-sm transition-all shadow-kinetic relative border border-transparent font-display">
-        <span class="btn-ring absolute inset-0 bg-primary/20 rounded-DEFAULT -z-10"></span>
-        Get App
-      </a>
       <button type="button" data-menu-open aria-label="Toggle Menu" class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
         <svg data-icon-menu width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         <svg data-icon-close class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -71,6 +104,34 @@
     </div>
   </div>
 </header>
+<script>
+  (function () {
+    const desktopLink = document.querySelector('[data-get-app-link]');
+    const mobileLink = document.querySelector('[data-mobile-get-app-link]');
+
+    const ua = navigator.userAgent || navigator.vendor || window.opera || '';
+    const isIOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/i.test(ua);
+
+    const appStoreUrl = 'https://apps.apple.com/';
+    const googlePlayUrl = 'https://play.google.com/store/apps';
+    const webAppUrl = '/discover/';
+
+    if (desktopLink) {
+      desktopLink.href = webAppUrl;
+      desktopLink.setAttribute('aria-label', 'Explore the Markt marketplace');
+      desktopLink.setAttribute('target', '_self');
+      desktopLink.removeAttribute('rel');
+    }
+
+    if (mobileLink) {
+      mobileLink.href = '/download-app/';
+      mobileLink.setAttribute('target', '_self');
+      mobileLink.removeAttribute('rel');
+      mobileLink.setAttribute('aria-label', 'Go to the Markt download page');
+    }
+  })();
+</script>
 
     <div data-mobile-menu class="mobile-menu fixed inset-0 z-100 bg-zinc-950 text-white flex flex-col items-center justify-center overflow-y-auto px-6 py-20 sm:py-32">
   <div data-menu-cursor class="hidden lg:block absolute left-0 top-0 w-8 h-8 rounded-full bg-primary mix-blend-screen pointer-events-none z-50 blur-sm"></div>
@@ -116,7 +177,7 @@
   </nav>
 
   <div class="absolute md:hidden bottom-10 left-0 right-0 px-6 flex justify-center gap-8 text-zinc-500 text-xs font-black uppercase tracking-widest font-display">
-    <span class="hover:text-white cursor-pointer transition-colors">Instagram</span>
+    <a href="https://www.instagram.com/marktcommerce/"><span class="hover:text-white cursor-pointer transition-colors">Instagram</span></a>
     <span class="hover:text-white cursor-pointer transition-colors">Twitter / X</span>
   </div>
 </div>
@@ -137,15 +198,37 @@
       Discover products through people, not just sterile listings. The premiere mobile marketplace for social driven and live commerce.
     </p>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full">
-      <a href="/download-app/" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
+    <!--
+      Hero CTAs are responsive by intent:
+        - Large screens (md+, laptops/tablets): explore the web marketplace directly.
+        - Small screens (phones): download the mobile app instead.
+      When the web marketplace is not yet live, both desktop links point at /discover/
+      (the coming-soon route), mirroring the header's "Explore Marketplace" button.
+    -->
+
+    <!-- Large-device CTAs: explore the marketplace -->
+    <div class="hidden md:flex flex-row items-center justify-center gap-6 mt-4 w-full">
+      <a href="/discover/" data-cta="explore-marketplace" class="pulse-scale group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-DEFAULT font-bold text-base min-w-[220px] border border-transparent relative shadow-kinetic bg-secondary text-white dark:bg-white dark:text-secondary font-display transition-all">
+        <span class="btn-ring absolute inset-0 bg-primary/20 rounded-DEFAULT -z-10"></span>
+        Explore the marketplace
+        <svg class="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </a>
+      <a href="/discover/" data-cta="i-want-to-sell" class="group inline-flex items-center gap-2 pb-1 font-bold text-base text-secondary dark:text-white font-display border-b-2 border-secondary/30 dark:border-white/30 hover:text-primary hover:border-primary transition-colors">
+        I want to sell
+        <svg class="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </a>
+    </div>
+
+    <!-- Small-device CTAs: download the app -->
+    <div class="flex md:hidden flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full">
+      <a href="/discover/" data-store-link="app-store" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
         <img src="/assets/img/app-store.png" alt="App Store" class="w-6 h-6 object-contain shrink-0" />
         <div class="text-left flex flex-col justify-center">
           <div class="text-[10px] uppercase font-bold leading-none mb-1 text-zinc-400 dark:text-zinc-500 font-display tracking-wider">Download on the</div>
           <div class="text-lg font-bold leading-none font-display">App Store</div>
         </div>
       </a>
-      <a href="/download-app/" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
+      <a href="/discover/" data-store-link="google-play" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
         <img src="/assets/img/app.png" alt="Google Play" class="w-6 h-6 object-contain shrink-0" />
         <div class="text-left flex flex-col justify-center">
           <div class="text-[10px] uppercase font-bold leading-none mb-1 text-zinc-400 dark:text-zinc-500 font-display tracking-wider">GET IT ON</div>
@@ -157,17 +240,17 @@
     <div class="w-full mt-14 sm:mt-20 md:mt-24 relative">
       <div class="absolute inset-x-0 inset-y-1/4 bg-primary/20 blur-[120px] rounded-[100%] pointer-events-none"></div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 w-full relative z-10">
-        <div data-reveal class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic md:translate-y-12 border border-outline dark:border-zinc-800">
-          <img src="/assets/img/fashion-shoes.jpg" alt="Shoes" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        <div data-reveal data-discovery-item class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic md:translate-y-12 border border-outline dark:border-zinc-800">
+          <img loading="lazy" src="/assets/img/fashion-shoes.jpg" alt="Shoes" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
         </div>
-        <div data-reveal data-reveal-delay="1" class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic border border-outline dark:border-zinc-800">
-          <img src="/assets/img/graphic-tshirt-trendy-design-mockup-presented-wooden-hanger.jpg" alt="Fashion" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        <div data-reveal data-reveal-delay="1" data-discovery-item class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic border border-outline dark:border-zinc-800">
+          <img loading="lazy" src="/assets/img/graphic-tshirt-trendy-design-mockup-presented-wooden-hanger.jpg" alt="Fashion" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
         </div>
-        <div data-reveal data-reveal-delay="2" class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic md:translate-y-8 border border-outline dark:border-zinc-800">
-          <img src="/assets/img/handbag.jpg" alt="Bag" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        <div data-reveal data-reveal-delay="2" data-discovery-item class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic md:translate-y-8 border border-outline dark:border-zinc-800">
+          <img loading="lazy" src="/assets/img/handbag.jpg" alt="Bag" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
         </div>
-        <div data-reveal data-reveal-delay="3" class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic hidden sm:block md:-translate-y-4 border border-outline dark:border-zinc-800">
-          <img src="/assets/img/closeup-shot-modern-cool-black-digital-watch-with-brown-leather-strap.jpg" alt="Watch" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+        <div data-reveal data-reveal-delay="3" data-discovery-item class="aspect-[3/4] rounded-lg overflow-hidden shadow-kinetic hidden sm:block md:-translate-y-4 border border-outline dark:border-zinc-800">
+          <img loading="lazy" src="/assets/img/closeup-shot-modern-cool-black-digital-watch-with-brown-leather-strap.jpg" alt="Watch" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
         </div>
       </div>
     </div>
@@ -531,7 +614,7 @@
       <div>
         <h4 class="text-secondary dark:text-zinc-50 font-bold mb-6 text-base tracking-tight font-display uppercase tracking-widest text-xs">Platform</h4>
         <ul class="flex flex-col gap-3 text-sm font-medium font-sans">
-          <li><a href="/download-app/" class="hover:text-primary transition-colors">Download App</a></li>
+          <li><a href="/discover/" data-download-link class="hover:text-primary transition-colors">Download App</a></li>
           <li><a href="/discover/" class="hover:text-primary transition-colors">Discover</a></li>
           <li><a href="/live-selling/" class="hover:text-primary transition-colors">Live Selling</a></li>
           <li><a href="/trust-safety/" class="hover:text-primary transition-colors">Trust & Safety</a></li>
@@ -545,6 +628,7 @@
           <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
           <li><a href="/cookie-policy/" class="hover:text-primary transition-colors">Cookie Policy</a></li>
           <li><a href="/terms-of-service/" class="hover:text-primary transition-colors">Terms of Service</a></li>
+          <li><a href="/delete-account/" class="hover:text-primary transition-colors">Delete Account</a></li>
         </ul>
       </div>
     </div>
@@ -552,18 +636,69 @@
   <div class="max-w-7xl mx-auto pt-8 border-t border-outline dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-semibold text-tertiary/60 dark:text-zinc-500 font-sans">
     <p>&copy; <span data-current-year>2026</span> Markt Technologies. All rights reserved.</p>
     <div class="flex gap-6">
-      <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">Twitter</a>
-      <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">Instagram</a>
-      <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">TikTok</a>
+      <a href="https://x.com/" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="hover:text-secondary dark:hover:text-white transition-colors">Twitter</a>
+      <a href="https://www.instagram.com/marktcommerce/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="hover:text-secondary dark:hover:text-white transition-colors">Instagram</a>
+      <a href="https://www.linkedin.com/company/marktcommerce/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="hover:text-secondary dark:hover:text-white transition-colors">LinkedIn</a>
     </div>
   </div>
 </footer>
-<script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
+<script>
+  (function () {
+    const storeLinks = document.querySelectorAll('[data-store-link]');
+    const paymentLinks = document.querySelectorAll('[data-download-link]');
+    const ua = navigator.userAgent || navigator.vendor || window.opera || '';
+    const isIOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/i.test(ua);
+
+    const appStoreUrl = 'https://apps.apple.com/';
+    const googlePlayUrl = 'https://play.google.com/store/apps';
+    const webAppUrl = 'https://app.marktcommerce.com/app/marketplace';
+
+    storeLinks.forEach(function (link) {
+      const kind = link.getAttribute('data-store-link');
+      const destination = kind === 'app-store' ? appStoreUrl : kind === 'google-play' ? googlePlayUrl : webAppUrl;
+      link.href = isIOS && kind === 'app-store' ? appStoreUrl : isAndroid && kind === 'google-play' ? googlePlayUrl : isIOS && kind === 'google-play' ? webAppUrl : isAndroid && kind === 'app-store' ? webAppUrl : destination;
+
+      if (isIOS || isAndroid) {
+        const preferred = isIOS ? appStoreUrl : googlePlayUrl;
+        if ((kind === 'app-store' && isIOS) || (kind === 'google-play' && isAndroid)) {
+          link.href = preferred;
+        } else if ((kind === 'app-store' && isAndroid) || (kind === 'google-play' && isIOS)) {
+          link.href = webAppUrl;
+        }
+      }
+
+      if (isIOS || isAndroid) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      } else {
+        link.setAttribute('target', '_self');
+        link.removeAttribute('rel');
+      }
+    });
+
+    paymentLinks.forEach(function (link) {
+      link.href = isIOS ? appStoreUrl : isAndroid ? googlePlayUrl : webAppUrl;
+      if (isIOS || isAndroid) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      } else {
+        link.setAttribute('target', '_self');
+        link.removeAttribute('rel');
+      }
+    });
+
+    document.querySelectorAll('[data-current-year]').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+  })();
+</script>
 
 
     <script src="/assets/js/dark-mode.js" defer></script>
     <script src="/assets/js/nav.js" defer></script>
     <script src="/assets/js/reveal.js" defer></script>
+    <script src="/assets/js/analytics.js" defer></script>
     <script src="/assets/js/rotating-words.js" defer></script>
     <script src="/assets/js/how-it-works-carousel.js" defer></script>
   </body>

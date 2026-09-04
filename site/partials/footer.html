@@ -15,8 +15,8 @@
       <div>
         <h4 class="text-secondary dark:text-zinc-50 font-bold mb-6 text-base tracking-tight font-display uppercase tracking-widest text-xs">Platform</h4>
         <ul class="flex flex-col gap-3 text-sm font-medium font-sans">
-          <li><a href="/download-app/" class="hover:text-primary transition-colors">Download App</a></li>
-          <li><a href="/discover/" class="hover:text-primary transition-colors">Discover</a></li>
+          <li><a href="https://app.marktcommerce.com/app/marketplace" data-download-link class="hover:text-primary transition-colors">Download App</a></li>
+          <li><a href="https://app.marktcommerce.com/app/marketplace" data-download-link class="hover:text-primary transition-colors">Discover</a></li>
           <li><a href="/live-selling/" class="hover:text-primary transition-colors">Live Selling</a></li>
           <li><a href="/trust-safety/" class="hover:text-primary transition-colors">Trust & Safety</a></li>
         </ul>
@@ -29,6 +29,7 @@
           <li><a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a></li>
           <li><a href="/cookie-policy/" class="hover:text-primary transition-colors">Cookie Policy</a></li>
           <li><a href="/terms-of-service/" class="hover:text-primary transition-colors">Terms of Service</a></li>
+          <li><a href="/delete-account/" class="hover:text-primary transition-colors">Delete Account</a></li>
         </ul>
       </div>
     </div>
@@ -36,10 +37,60 @@
   <div class="max-w-7xl mx-auto pt-8 border-t border-outline dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-semibold text-tertiary/60 dark:text-zinc-500 font-sans">
     <p>&copy; <span data-current-year>2026</span> Markt Technologies. All rights reserved.</p>
     <div class="flex gap-6">
-      <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">Twitter</a>
-      <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">Instagram</a>
-      <a href="#" class="hover:text-secondary dark:hover:text-white transition-colors">TikTok</a>
+      <a href="https://x.com/" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="hover:text-secondary dark:hover:text-white transition-colors">Twitter</a>
+      <a href="https://www.instagram.com/marktcommerce/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="hover:text-secondary dark:hover:text-white transition-colors">Instagram</a>
+      <a href="https://www.linkedin.com/company/marktcommerce/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="hover:text-secondary dark:hover:text-white transition-colors">LinkedIn</a>
     </div>
   </div>
 </footer>
-<script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
+<script>
+  (function () {
+    const storeLinks = document.querySelectorAll('[data-store-link]');
+    const paymentLinks = document.querySelectorAll('[data-download-link]');
+    const ua = navigator.userAgent || navigator.vendor || window.opera || '';
+    const isIOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/i.test(ua);
+
+    const appStoreUrl = 'https://apps.apple.com/';
+    const googlePlayUrl = 'https://play.google.com/store/apps';
+    const webAppUrl = 'https://app.marktcommerce.com/app/marketplace';
+
+    storeLinks.forEach(function (link) {
+      const kind = link.getAttribute('data-store-link');
+      const destination = kind === 'app-store' ? appStoreUrl : kind === 'google-play' ? googlePlayUrl : webAppUrl;
+      link.href = isIOS && kind === 'app-store' ? appStoreUrl : isAndroid && kind === 'google-play' ? googlePlayUrl : isIOS && kind === 'google-play' ? webAppUrl : isAndroid && kind === 'app-store' ? webAppUrl : destination;
+
+      if (isIOS || isAndroid) {
+        const preferred = isIOS ? appStoreUrl : googlePlayUrl;
+        if ((kind === 'app-store' && isIOS) || (kind === 'google-play' && isAndroid)) {
+          link.href = preferred;
+        } else if ((kind === 'app-store' && isAndroid) || (kind === 'google-play' && isIOS)) {
+          link.href = webAppUrl;
+        }
+      }
+
+      if (isIOS || isAndroid) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      } else {
+        link.setAttribute('target', '_self');
+        link.removeAttribute('rel');
+      }
+    });
+
+    paymentLinks.forEach(function (link) {
+      link.href = isIOS ? appStoreUrl : isAndroid ? googlePlayUrl : webAppUrl;
+      if (isIOS || isAndroid) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      } else {
+        link.setAttribute('target', '_self');
+        link.removeAttribute('rel');
+      }
+    });
+
+    document.querySelectorAll('[data-current-year]').forEach(function (el) {
+      el.textContent = new Date().getFullYear();
+    });
+  })();
+</script>
