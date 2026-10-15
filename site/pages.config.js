@@ -59,7 +59,7 @@ export default [
   {
     slug: 'terms-of-service',
     title: 'Terms of Use',
-    description: 'Terms of Use for Markt Commerce. Last updated: April 28, 2026',
+    description: 'Terms of Use for Markt Commerce. Last updated: October 15, 2026',
     content: 'pages/terms-of-service/content.html',
   },
   {

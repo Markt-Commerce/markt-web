@@ -62,7 +62,6 @@
   content="Shop, discover and buy from local sellers on Markt — Nigeria's social marketplace built for everyday life."
 />
 <meta name="twitter:image" content="https://marktcommerce.com/assets/img/icon.png" />
-```
 
     <link rel="stylesheet" href="/assets/css/main.css" />
 
@@ -104,34 +103,6 @@
     </div>
   </div>
 </header>
-<script>
-  (function () {
-    const desktopLink = document.querySelector('[data-get-app-link]');
-    const mobileLink = document.querySelector('[data-mobile-get-app-link]');
-
-    const ua = navigator.userAgent || navigator.vendor || window.opera || '';
-    const isIOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-    const isAndroid = /Android/i.test(ua);
-
-    const appStoreUrl = 'https://apps.apple.com/';
-    const googlePlayUrl = 'https://play.google.com/store/apps';
-    const webAppUrl = '/discover/';
-
-    if (desktopLink) {
-      desktopLink.href = webAppUrl;
-      desktopLink.setAttribute('aria-label', 'Explore the Markt marketplace');
-      desktopLink.setAttribute('target', '_self');
-      desktopLink.removeAttribute('rel');
-    }
-
-    if (mobileLink) {
-      mobileLink.href = '/download-app/';
-      mobileLink.setAttribute('target', '_self');
-      mobileLink.removeAttribute('rel');
-      mobileLink.setAttribute('aria-label', 'Go to the Markt download page');
-    }
-  })();
-</script>
 
     <div data-mobile-menu class="mobile-menu fixed inset-0 z-100 bg-zinc-950 text-white flex flex-col items-center justify-center overflow-y-auto px-6 py-20 sm:py-32">
   <div data-menu-cursor class="hidden lg:block absolute left-0 top-0 w-8 h-8 rounded-full bg-primary mix-blend-screen pointer-events-none z-50 blur-sm"></div>
@@ -169,7 +140,7 @@
     </div>
 
     <div class="mt-8 sm:mt-12">
-      <a href="/download-app/" class="relative px-8 sm:px-12 py-4 sm:py-6 rounded-xl bg-primary text-white text-xl sm:text-2xl font-black shadow-kinetic hover:-translate-y-1 active:scale-95 transition-all duration-300 font-display tracking-tight overflow-hidden group inline-block">
+      <a href="https://app.marktcommerce.com/app/marketplace" data-download-link class="relative px-8 sm:px-12 py-4 sm:py-6 rounded-xl bg-primary text-white text-xl sm:text-2xl font-black shadow-kinetic hover:-translate-y-1 active:scale-95 transition-all duration-300 font-display tracking-tight overflow-hidden group inline-block">
         <span class="relative z-10">Get the App</span>
         <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
       </a>
@@ -200,20 +171,20 @@
 
     <!--
       Hero CTAs are responsive by intent:
-        - Large screens (md+, laptops/tablets): explore the web marketplace directly.
-        - Small screens (phones): download the mobile app instead.
-      When the web marketplace is not yet live, both desktop links point at /discover/
-      (the coming-soon route), mirroring the header's "Explore Marketplace" button.
+        - Large screens (md+, laptops/tablets): open the live web marketplace at
+          app.marktcommerce.com directly.
+        - Small screens (phones): send to the platform app store instead (device
+          detection via data-store-link in footer.html).
     -->
 
     <!-- Large-device CTAs: explore the marketplace -->
     <div class="hidden md:flex flex-row items-center justify-center gap-6 mt-4 w-full">
-      <a href="/discover/" data-cta="explore-marketplace" class="pulse-scale group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-DEFAULT font-bold text-base min-w-[220px] border border-transparent relative shadow-kinetic bg-secondary text-white dark:bg-white dark:text-secondary font-display transition-all">
+      <a href="https://app.marktcommerce.com/app/marketplace" data-cta="explore-marketplace" class="pulse-scale group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-DEFAULT font-bold text-base min-w-[220px] border border-transparent relative shadow-kinetic bg-secondary text-white dark:bg-white dark:text-secondary font-display transition-all">
         <span class="btn-ring absolute inset-0 bg-primary/20 rounded-DEFAULT -z-10"></span>
         Explore the marketplace
         <svg class="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
       </a>
-      <a href="/discover/" data-cta="i-want-to-sell" class="group inline-flex items-center gap-2 pb-1 font-bold text-base text-secondary dark:text-white font-display border-b-2 border-secondary/30 dark:border-white/30 hover:text-primary hover:border-primary transition-colors">
+      <a href="https://app.marktcommerce.com/app/marketplace" data-cta="i-want-to-sell" class="group inline-flex items-center gap-2 pb-1 font-bold text-base text-secondary dark:text-white font-display border-b-2 border-secondary/30 dark:border-white/30 hover:text-primary hover:border-primary transition-colors">
         I want to sell
         <svg class="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
       </a>
@@ -575,14 +546,14 @@
           Join the platform that is changing the way mobile commerce feels. Available now on iOS and Android.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-6 w-full sm:w-auto">
-          <a href="/download-app/" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
+          <a href="https://app.marktcommerce.com/app/marketplace" data-store-link="app-store" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
             <img src="/assets/img/app-store.png" alt="App Store" class="w-6 h-6 object-contain shrink-0" />
             <div class="text-left flex flex-col justify-center">
               <div class="text-[10px] uppercase font-bold leading-none mb-1 text-zinc-400 dark:text-zinc-500 font-display tracking-wider">Download on the</div>
               <div class="text-lg font-bold leading-none font-display">App Store</div>
             </div>
           </a>
-          <a href="/download-app/" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
+          <a href="https://app.marktcommerce.com/app/marketplace" data-store-link="google-play" class="pulse-scale group flex items-center justify-center gap-3 px-8 py-4 rounded-DEFAULT transition-all duration-300 min-w-[200px] border border-transparent relative overflow-hidden bg-secondary text-white dark:bg-white dark:text-secondary shadow-kinetic">
             <img src="/assets/img/app.png" alt="Google Play" class="w-6 h-6 object-contain shrink-0" />
             <div class="text-left flex flex-col justify-center">
               <div class="text-[10px] uppercase font-bold leading-none mb-1 text-zinc-400 dark:text-zinc-500 font-display tracking-wider">GET IT ON</div>
@@ -614,8 +585,8 @@
       <div>
         <h4 class="text-secondary dark:text-zinc-50 font-bold mb-6 text-base tracking-tight font-display uppercase tracking-widest text-xs">Platform</h4>
         <ul class="flex flex-col gap-3 text-sm font-medium font-sans">
-          <li><a href="/discover/" data-download-link class="hover:text-primary transition-colors">Download App</a></li>
-          <li><a href="/discover/" class="hover:text-primary transition-colors">Discover</a></li>
+          <li><a href="https://app.marktcommerce.com/app/marketplace" data-download-link class="hover:text-primary transition-colors">Download App</a></li>
+          <li><a href="https://app.marktcommerce.com/app/marketplace" data-download-link class="hover:text-primary transition-colors">Discover</a></li>
           <li><a href="/live-selling/" class="hover:text-primary transition-colors">Live Selling</a></li>
           <li><a href="/trust-safety/" class="hover:text-primary transition-colors">Trust & Safety</a></li>
         </ul>
@@ -651,7 +622,7 @@
     const isAndroid = /Android/i.test(ua);
 
     const appStoreUrl = 'https://apps.apple.com/';
-    const googlePlayUrl = 'https://play.google.com/store/apps';
+    const googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.marktcommerce.markt';
     const webAppUrl = 'https://app.marktcommerce.com/app/marketplace';
 
     storeLinks.forEach(function (link) {
