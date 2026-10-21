@@ -57,6 +57,12 @@ export default [
     content: 'pages/privacy-policy/content.html',
   },
   {
+    slug: 'privacy-policy/logistics-partners',
+    title: 'Delivery Partner Privacy Policy',
+    description: 'Privacy Policy for delivery partners using the Markt Logistics app. Last updated: October 21, 2026',
+    content: 'pages/privacy-policy/logistics-partners/content.html',
+  },
+  {
     slug: 'terms-of-service',
     title: 'Terms of Use',
     description: 'Terms of Use for Markt Commerce. Last updated: October 15, 2026',
