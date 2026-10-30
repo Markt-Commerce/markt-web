@@ -1,0 +1,19 @@
+<div class="pt-20 sm:pt-24 md:pt-28">
+  <!-- include: partials/business-nav.html -->
+
+  <section class="relative z-10 px-4 sm:px-6 pt-12 sm:pt-20 pb-24">
+    <div class="max-w-[36rem] mx-auto text-center">
+      <p class="text-xs font-black uppercase tracking-[0.3em] text-primary font-display mb-6">Business login</p>
+      <h1 class="text-4xl sm:text-5xl font-black tracking-tighter text-secondary dark:text-zinc-50 font-display leading-none mb-6">Log in with your Markt account.</h1>
+      <p class="text-lg text-tertiary dark:text-zinc-400 font-medium font-sans leading-relaxed mb-10">There's no separate business login. Taking you to Markt sign-in&hellip;</p>
+      <a data-business-login href="https://app.marktcommerce.com/auth/login?returnUrl=%2Fapp%2Fbusiness" class="inline-flex items-center justify-center px-8 py-4 rounded-DEFAULT bg-primary text-white font-bold font-display shadow-kinetic hover:bg-primary-hover transition-colors">Continue to log in</a>
+      <p class="mt-8 text-sm text-tertiary dark:text-zinc-500 font-sans">New to Markt? <a href="/business/register/" class="font-semibold text-secondary dark:text-zinc-200 underline underline-offset-4 hover:text-primary">Get started</a></p>
+    </div>
+  </section>
+  <script>
+    (function () {
+      var link = document.querySelector('[data-business-login]');
+      if (link) window.location.replace(link.href);
+    })();
+  </script>
+</div>
