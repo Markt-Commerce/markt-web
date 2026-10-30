@@ -90,4 +90,69 @@ export default [
     content: 'pages/delete-account/content.html',
   },
   comingSoon('careers', 'Careers'),
+
+  // --- Markt Business ------------------------------------------------------
+  {
+    slug: 'business',
+    title: 'Markt Business',
+    description: 'Discover producers, manufacturers and suppliers through one connected commerce platform. Find partners, post procurement requests and coordinate transactions on Markt.',
+    content: 'pages/business/home/content.html',
+    extraScripts: ['faq-accordion.js'],
+  },
+  {
+    slug: 'business/producers',
+    title: 'Markt Business for Producers',
+    description: 'Your produce deserves a bigger market. Reach manufacturers and business buyers, list your supply and respond to procurement requests on Markt.',
+    content: 'pages/business/producers/content.html',
+    extraScripts: ['faq-accordion.js'],
+  },
+  {
+    slug: 'business/manufacturers',
+    title: 'Markt Business for Manufacturers',
+    description: 'Find the suppliers your business needs. Source raw materials, packaging and industrial inputs and post procurement requests on Markt.',
+    content: 'pages/business/manufacturers/content.html',
+  },
+  {
+    slug: 'business/suppliers',
+    title: 'Markt Business for Suppliers',
+    description: 'List packaging, machinery, equipment and inputs with business terms, and respond to businesses looking for what you supply.',
+    content: 'pages/business/suppliers/content.html',
+  },
+  {
+    slug: 'business/how-it-works',
+    title: 'How Markt Business Works',
+    description: 'From creating a business account to completing a transaction: how producers, manufacturers and suppliers trade on Markt.',
+    content: 'pages/business/how-it-works/content.html',
+  },
+  {
+    slug: 'business/about',
+    title: 'About Markt Business',
+    description: 'Markt Business extends Markt to commerce between businesses, connecting producers, manufacturers and suppliers on one platform.',
+    content: 'pages/business/about/content.html',
+  },
+  {
+    slug: 'business/faqs',
+    title: 'Markt Business FAQs',
+    description: 'Answers for businesses: registering, finding suppliers, procurement requests, negotiation, payments, delivery and pricing.',
+    content: 'pages/business/faqs/content.html',
+    extraScripts: ['faq-accordion.js'],
+  },
+  {
+    slug: 'business/contact',
+    title: 'Contact Markt Business',
+    description: 'Get in touch about getting your business on Markt, partnerships, verification or feedback.',
+    content: 'pages/business/contact/content.html',
+  },
+  {
+    slug: 'business/register',
+    title: 'Get Started with Markt Business',
+    description: 'Set up your business on Markt with your existing Markt account. Free to join.',
+    content: 'pages/business/register/content.html',
+  },
+  {
+    slug: 'business/login',
+    title: 'Markt Business Login',
+    description: 'Log in to Markt Business with your Markt account.',
+    content: 'pages/business/login/content.html',
+  },
 ];

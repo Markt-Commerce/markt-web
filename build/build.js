@@ -17,6 +17,13 @@ function read(relPath) {
   return fs.readFileSync(path.join(SITE, relPath), 'utf8');
 }
 
+// `<!-- include: partials/name.html -->` in page content is replaced by that
+// partial, so sections shared by a group of pages (the business sub-nav and
+// closing CTA) live in one file.
+function applyIncludes(html) {
+  return html.replace(/<!--\s*include:\s*([\w./-]+)\s*-->/g, (_, relPath) => read(relPath));
+}
+
 function applyVars(html, vars) {
   if (!vars) return html;
   return Object.entries(vars).reduce(
@@ -101,7 +108,7 @@ function buildPages() {
   fs.mkdirSync(DIST, { recursive: true });
 
   for (const page of pages) {
-    const rawContent = read(page.content);
+    const rawContent = applyIncludes(read(page.content));
     const content = applyVars(rawContent, page.vars);
     const title = applyVars(page.title, page.vars);
     const description = applyVars(page.description, page.vars);

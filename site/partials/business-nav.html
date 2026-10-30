@@ -1,0 +1,37 @@
+<nav aria-label="Markt Business" class="relative z-10 px-4 sm:px-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center gap-4 md:gap-6 py-4 border-b border-outline dark:border-zinc-800">
+    <a href="/business/" class="flex items-center gap-2 shrink-0 font-display font-black tracking-tight text-secondary dark:text-zinc-50">
+      Markt
+      <span class="px-2 py-0.5 rounded-sm bg-primary text-white text-[0.65rem] font-black uppercase tracking-widest">Business</span>
+    </a>
+    <div data-business-nav-scroller class="flex gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-1 px-1 text-sm font-semibold font-sans whitespace-nowrap">
+      <a href="/business/" data-business-nav class="px-3 py-2 rounded-DEFAULT text-tertiary dark:text-zinc-400 hover:text-secondary dark:hover:text-zinc-50 hover:bg-neutral dark:hover:bg-zinc-900 transition-colors">Overview</a>
+      <a href="/business/producers/" data-business-nav class="px-3 py-2 rounded-DEFAULT text-tertiary dark:text-zinc-400 hover:text-secondary dark:hover:text-zinc-50 hover:bg-neutral dark:hover:bg-zinc-900 transition-colors">Producers</a>
+      <a href="/business/manufacturers/" data-business-nav class="px-3 py-2 rounded-DEFAULT text-tertiary dark:text-zinc-400 hover:text-secondary dark:hover:text-zinc-50 hover:bg-neutral dark:hover:bg-zinc-900 transition-colors">Manufacturers</a>
+      <a href="/business/suppliers/" data-business-nav class="px-3 py-2 rounded-DEFAULT text-tertiary dark:text-zinc-400 hover:text-secondary dark:hover:text-zinc-50 hover:bg-neutral dark:hover:bg-zinc-900 transition-colors">Suppliers</a>
+      <a href="/business/how-it-works/" data-business-nav class="px-3 py-2 rounded-DEFAULT text-tertiary dark:text-zinc-400 hover:text-secondary dark:hover:text-zinc-50 hover:bg-neutral dark:hover:bg-zinc-900 transition-colors">How it works</a>
+      <a href="/business/about/" data-business-nav class="px-3 py-2 rounded-DEFAULT text-tertiary dark:text-zinc-400 hover:text-secondary dark:hover:text-zinc-50 hover:bg-neutral dark:hover:bg-zinc-900 transition-colors">About</a>
+      <a href="/business/faqs/" data-business-nav class="px-3 py-2 rounded-DEFAULT text-tertiary dark:text-zinc-400 hover:text-secondary dark:hover:text-zinc-50 hover:bg-neutral dark:hover:bg-zinc-900 transition-colors">FAQs</a>
+      <a href="/business/contact/" data-business-nav class="px-3 py-2 rounded-DEFAULT text-tertiary dark:text-zinc-400 hover:text-secondary dark:hover:text-zinc-50 hover:bg-neutral dark:hover:bg-zinc-900 transition-colors">Contact</a>
+    </div>
+    <div class="hidden md:flex items-center gap-2 ml-auto shrink-0">
+      <a href="/business/login/" class="px-4 py-2 rounded-DEFAULT text-sm font-bold font-display text-secondary dark:text-zinc-50 hover:bg-neutral dark:hover:bg-zinc-900 transition-colors">Log in</a>
+      <a href="/business/register/" class="px-4 py-2 rounded-DEFAULT text-sm font-bold font-display bg-primary text-white hover:bg-primary-hover transition-colors">Get started</a>
+    </div>
+  </div>
+</nav>
+<script>
+  (function () {
+    var path = window.location.pathname.replace(/\/?$/, '/');
+    document.querySelectorAll('[data-business-nav]').forEach(function (link) {
+      if (link.getAttribute('href') === path) {
+        link.setAttribute('aria-current', 'page');
+        link.classList.remove('text-tertiary', 'dark:text-zinc-400');
+        link.classList.add('text-secondary', 'dark:text-zinc-50', 'bg-neutral', 'dark:bg-zinc-900');
+        // On phones the row scrolls sideways; bring the current page into view.
+        var scroller = link.closest('[data-business-nav-scroller]');
+        if (scroller) scroller.scrollLeft = link.offsetLeft - scroller.offsetLeft - 16;
+      }
+    });
+  })();
+</script>
